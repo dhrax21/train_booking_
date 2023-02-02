@@ -29,15 +29,24 @@ public class PassengerService {
     }
 
     public int getPassengerByCity(String city){
-        List<Train> trainList=trainRepository.findAll();
+//        List<Train> trainList=trainRepository.findAll();
+//
+//
+//        for(Train train : trainList){
+//            if(train.getSource().equals(city)){
+//                count++;
+//            }
+//        }
+
+//        return count;
         int count=0;
 
-        for(Train train : trainList){
-            if(train.getSource().equals(city)){
+        List<Passengers> passengersList = passengerRepository.findAll();
+        for(Passengers passengers : passengersList){
+            if(passengers.getTrain().getSource().equals(city)){
                 count++;
             }
         }
-
         return count;
     }
 

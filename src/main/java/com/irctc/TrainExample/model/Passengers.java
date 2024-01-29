@@ -36,4 +36,19 @@ public class Passengers {
     @JoinColumn
     private List<FoodOrder> foodOrderList;
 
+    public int getTicketId() {
+        return ticketId;
+    }
+
+    public int getTrainId() {
+        return trainId;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public Train getTrain() {
+        return train;
+    }
 }

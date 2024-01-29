@@ -25,4 +25,8 @@ public class Train {
 
     @OneToMany(mappedBy = "train",cascade = CascadeType.ALL)
     private List<Passengers> passengersList;
+
+    public String getSource() {
+        return source;
+    }
 }

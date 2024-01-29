@@ -26,4 +26,12 @@ public class FoodOrder {
     @ManyToOne
     @JoinColumn
     private Passengers passengers;
+
+    public int getTicketId() {
+        return ticketId;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }
